@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sushant Bhardwaj — Independent Security Researcher, Ethical Hacker &amp; AI Security Researcher</title>
+<meta name="description" content="Sushant Bhardwaj is a young ethical hacker and independent security researcher based in Delhi, India, featured in Dark Reading and recognized as a CERT-In Hall of Fame recipient. His work spans responsible vulnerability disclosure, SOC operations, and growing research interests in AI security and AI safety.">
+<meta name="keywords" content="ethical hacker India, young ethical hacker, security researcher India, young security researcher, AI security researcher, AI safety researcher, cybersecurity researcher, CERT-In Hall of Fame, bug bounty India, responsible disclosure, student security researcher, Sushant Bhardwaj">
+<meta name="author" content="Sushant Bhardwaj">
+<meta property="og:title" content="Sushant Bhardwaj — Independent Security Researcher &amp; Ethical Hacker">
+<meta property="og:description" content="Young ethical hacker and independent security researcher featured in Dark Reading, CERT-In Hall of Fame recipient, with growing focus on AI security and AI safety research.">
+<meta property="og:type" content="profile">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sushant Bhardwaj",
+  "jobTitle": "Independent Security Researcher",
+  "description": "Young ethical hacker and independent security researcher specializing in responsible vulnerability disclosure, SOC operations, web application security, and AI security research.",
+  "url": "https://sushantbhardwaj.com",
+  "sameAs": [
+    "https://github.com/SushantBhardwaj16",
+    "https://www.linkedin.com/in/sushant-bhardwaj-3589b3310/",
+    "https://medium.com/@sushant.bhardwaj.9th.c"
+  ],
+  "knowsAbout": ["Ethical Hacking","Vulnerability Disclosure","SOC Operations","Web Application Security","Penetration Testing","AI Security","AI Safety Research"],
+  "alumniOf": "SRM Institute of Science and Technology"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EDEAE1;
+    --paper-dim:#E2DDD1;
+    --ink:#1B1B18;
+    --ink-soft:#514F49;
+    --rule:#C9C4B6;
+    --signal:#B23A2F;
+    --slate:#3D5A73;
+    --stamp-green:#3A5A40;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.55;
+  }
+  a{color:var(--slate);}
+  ::selection{background:var(--signal);color:var(--paper);}
+
+  .wrap{max-width:920px;margin:0 auto;padding:0 28px;}
+
+  header.top{
+    position:sticky;top:0;z-index:50;
+    background:var(--paper);
+    border-bottom:1px solid var(--rule);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 0;
+  }
+  .nav .mark{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;font-weight:700;letter-spacing:0.02em;
+  }
+  .nav .mark span{color:var(--signal);}
+  .nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0;}
+  .nav a{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;text-decoration:none;color:var(--ink-soft);
+    text-transform:uppercase;letter-spacing:0.06em;
+  }
+  .nav a:hover{color:var(--signal);}
+
+  /* HERO */
+  .hero{padding:76px 0 56px;border-bottom:1px solid var(--rule);}
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;color:var(--signal);
+    letter-spacing:0.08em;text-transform:uppercase;
+    display:flex;align-items:center;gap:10px;margin-bottom:18px;
+  }
+  .eyebrow::before{content:"";width:8px;height:8px;background:var(--signal);border-radius:50%;display:inline-block;}
+  h1.name{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:clamp(40px,6vw,68px);
+    line-height:1.02;
+    margin:0 0 14px;
+    letter-spacing:-0.01em;
+  }
+  .role{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:400;
+    font-size:clamp(18px,2.4vw,22px);color:var(--ink-soft);margin:0 0 28px;
+  }
+  .thesis{max-width:600px;font-size:17px;color:var(--ink-soft);margin-bottom:32px;}
+  .thesis strong{color:var(--ink);font-weight:600;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    font-family:'JetBrains Mono',monospace;font-size:13px;
+    padding:11px 18px;border:1px solid var(--ink);text-decoration:none;
+    color:var(--ink);letter-spacing:0.02em;
+  }
+  .btn.primary{background:var(--ink);color:var(--paper);}
+  .btn:hover{background:var(--ink);color:var(--paper);}
+  .btn.primary:hover{background:var(--signal);border-color:var(--signal);}
+
+  /* DOCKET STRIP */
+  .docket-strip{
+    border-bottom:1px solid var(--rule);
+    background:var(--paper-dim);
+  }
+  .docket-strip .wrap{
+    display:grid;grid-template-columns:repeat(4,1fr);
+  }
+  .docket-cell{
+    padding:22px 20px;border-left:1px solid var(--rule);
+  }
+  .docket-cell:first-child{border-left:none;}
+  .docket-num{
+    font-family:'JetBrains Mono',monospace;font-weight:700;
+    font-size:26px;color:var(--ink);
+  }
+  .docket-label{
+    font-family:'JetBrains Mono',monospace;font-size:11px;
+    color:var(--ink-soft);text-transform:uppercase;letter-spacing:0.05em;
+    margin-top:4px;
+  }
+
+  section{padding:64px 0;border-bottom:1px solid var(--rule);}
+  section:last-of-type{border-bottom:none;}
+  .sec-head{
+    display:flex;align-items:baseline;gap:16px;margin-bottom:36px;
+  }
+  .sec-num{font-family:'JetBrains Mono',monospace;color:var(--signal);font-size:13px;}
+  h2{
+    font-family:'Fraunces',serif;font-weight:600;font-size:30px;margin:0;
+  }
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;}
+  .about-grid p{color:var(--ink-soft);margin:0 0 16px;}
+  .about-grid p:last-child{margin-bottom:0;}
+  .stack-list{list-style:none;margin:0;padding:0;font-family:'JetBrains Mono',monospace;font-size:13px;}
+  .stack-list li{padding:9px 0;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:10px;}
+  .stack-list li:first-child{border-top:none;}
+  .stack-list span{color:var(--ink-soft);text-align:right;}
+
+  /* CASE / DISCLOSURE SUMMARY */
+  .case{
+    border:1px solid var(--rule);
+    margin-bottom:16px;
+    background:var(--paper);
+  }
+  .case-head{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:14px 20px;border-bottom:1px solid var(--rule);
+    flex-wrap:wrap;gap:10px;
+  }
+  .case-id{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--ink-soft);}
+  .stamp{
+    font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;
+    text-transform:uppercase;letter-spacing:0.06em;
+    padding:4px 10px;border:1.5px solid var(--stamp-green);color:var(--stamp-green);
+    transform:rotate(-2deg);
+  }
+  .case-body{padding:18px 20px;}
+  .case-title{font-family:'Fraunces',serif;font-size:19px;font-weight:600;margin:0 0 8px;}
+  .case-meta{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-soft);margin:0 0 10px;}
+  .case-desc{color:var(--ink-soft);font-size:14.5px;margin:0;}
+
+  /* RESEARCH / GRID CARDS */
+  .card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+  .card{border:1px solid var(--rule);padding:22px;}
+  .card-tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--signal);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;display:block;}
+  .card h3{font-family:'Fraunces',serif;font-size:19px;margin:0 0 8px;}
+  .card p{color:var(--ink-soft);font-size:14px;margin:0;}
+
+  /* PRESS */
+  .press-list{list-style:none;margin:0;padding:0;}
+  .press-list li{
+    display:flex;justify-content:space-between;align-items:baseline;
+    padding:16px 0;border-top:1px solid var(--rule);gap:16px;flex-wrap:wrap;
+  }
+  .press-list li:first-child{border-top:none;}
+  .press-outlet{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:0.05em;min-width:140px;}
+  .press-title{font-family:'Fraunces',serif;font-size:17px;flex:1;}
+  .press-link{font-family:'JetBrains Mono',monospace;font-size:12px;text-decoration:none;white-space:nowrap;}
+
+  /* CONTACT */
+  .contact-grid{display:flex;gap:40px;flex-wrap:wrap;}
+  .contact-item{font-family:'JetBrains Mono',monospace;font-size:14px;}
+  .contact-item .l{color:var(--ink-soft);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;display:block;margin-bottom:6px;}
+
+  footer{padding:32px 0;text-align:center;}
+  footer p{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-soft);}
+
+  @media (max-width:760px){
+    .nav ul{display:none;}
+    .docket-strip .wrap{grid-template-columns:repeat(2,1fr);}
+    .docket-cell:nth-child(3){border-left:none;}
+    .about-grid,.card-grid{grid-template-columns:1fr;}
+    .stack-list li{flex-direction:column;gap:2px;}
+    .stack-list span{text-align:left;}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap nav">
+    <div class="mark">SB<span>/</span>SEC</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#disclosures">Disclosures</a></li>
+      <li><a href="#press">Press</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">CERT-In Hall of Fame · Featured in Dark Reading</div>
+    <h1 class="name">Sushant Bhardwaj</h1>
+    <p class="role">Independent Security Researcher, Ethical Hacker &amp; AI Security Researcher</p>
+    <p class="thesis">
+      A young ethical hacker and cybersecurity student with hands-on SOC experience, focused on <strong>responsible vulnerability disclosure, web application security, and security compliance documentation</strong> — with a growing research interest in <strong>AI security and AI safety.</strong> Based in Delhi, India.
+    </p>
+    <div class="hero-cta">
+      <a class="btn primary" href="#disclosures">View research</a>
+      <a class="btn" href="/Sushant_Bhardwaj_Resume.pdf" download>Download resume</a>
+    </div>
+  </div>
+</section>
+
+<div class="docket-strip">
+  <div class="wrap">
+    <div class="docket-cell">
+      <div class="docket-num">14</div>
+      <div class="docket-label">Vulnerabilities disclosed</div>
+    </div>
+    <div class="docket-cell">
+      <div class="docket-num">2–3 wks</div>
+      <div class="docket-label">Avg. remediation time</div>
+    </div>
+    <div class="docket-cell">
+      <div class="docket-num">6+</div>
+      <div class="docket-label">Validated reports (CERT-In)</div>
+    </div>
+    <div class="docket-cell">
+      <div class="docket-num">#14/266</div>
+      <div class="docket-label">HAXCAMP Splunk SIEM challenge</div>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2>About</h2></div>
+    <div class="about-grid">
+      <div>
+        <p>I'm a Computer Science &amp; Engineering (Cyber Security) student at SRM Institute of Science and Technology, Delhi NCR, and a young ethical hacker with hands-on experience in SOC operations, network security monitoring, vulnerability assessment, and security compliance documentation.</p>
+        <p>My independent security research centers on responsible vulnerability disclosure — identifying access-control, misconfiguration, and IAM issues in public-facing web applications and reporting them through coordinated channels like CERT-In and HackerOne. As a student security researcher, I've tried to treat each finding as documentation-worthy, not just a report to file and forget.</p>
+        <p>That work was featured in Dark Reading in June 2026 and recognized with a CERT-In Hall of Fame listing. More recently, I've been exploring the intersection of cybersecurity and artificial intelligence — experimenting with AI-assisted security tooling and reading into the emerging fields of AI security and AI safety research, alongside continuing disclosure work and public writing on the path into security research.</p>
+      </div>
+      <ul class="stack-list">
+        <li><span>Focus</span> <span>AppSec, VAPT, SOC</span></li>
+        <li><span>SIEM</span> <span>IBM QRadar, Splunk</span></li>
+        <li><span>Tools</span> <span>Burp Suite, Nmap, Wireshark</span></li>
+        <li><span>Languages</span> <span>Python, SQL, Bash, C++</span></li>
+        <li><span>Certs</span> <span>Security+, AZ-900, CCST</span></li>
+        <li><span>Based in</span> <span>Delhi, India</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Approach</h2></div>
+    <div class="about-grid">
+      <div>
+        <p>Most of my work as an ethical hacker starts the same way: recon, careful enumeration, and manual testing rather than relying purely on automated scanners. I'd rather find one well-documented, high-confidence issue than a long list of low-signal noise.</p>
+        <p>As a young security researcher still early in my career, I try to be deliberate about what I publish — writing up root causes, not just proof-of-concept screenshots, and thinking about what a defender or another researcher could actually learn from a disclosure.</p>
+        <p>That same instinct is pulling me toward AI security and AI safety research: as more security tooling and decision-making gets built on top of AI systems, understanding how those systems fail — and how to test them responsibly — feels like a natural extension of the disclosure work I already do.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Research &amp; Projects</h2></div>
+    <div class="card-grid">
+      <div class="card">
+        <span class="card-tag">Project</span>
+        <h3>SSH honeypot &amp; SOC investigation</h3>
+        <p>Deployed a Cowrie SSH honeypot and analyzed brute-force attack activity through log analysis, simulating a full SOC workflow — detection, event correlation, and reporting.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag">Project</span>
+        <h3>Custom TCP port scanner</h3>
+        <p>A Python-based TCP scanner supporting service enumeration and banner grabbing, built to understand scanning and fingerprinting fundamentals.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag">In progress</span>
+        <h3>Patterns in public-sector auth failures</h3>
+        <p>An in-progress writeup looking at recurring configuration and access-control weaknesses across the platforms covered in this research.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag">Open-source</span>
+        <h3>Disclosure report generator</h3>
+        <p>A tool to standardize responsible-disclosure writeups into a consistent, agency-ready report format. In development.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag">Exploring</span>
+        <h3>AI-assisted security workflows</h3>
+        <p>Experimenting with AI-assisted recon and triage tooling as a way into broader AI security questions — how AI systems get used in offensive and defensive security work, and what that means for AI safety more generally.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="disclosures">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Responsible Disclosure</h2></div>
+
+    <div class="case">
+      <div class="case-head">
+        <span class="case-id">National civil service &amp; education portals</span>
+        <span class="stamp">Remediated · 2–3 weeks</span>
+      </div>
+      <div class="case-body">
+        <h3 class="case-title">14 vulnerabilities disclosed (2 critical, 4 high)</h3>
+        <p class="case-meta">Coordinated disclosure via CERT-In · Featured in Dark Reading, June 2026</p>
+        <p class="case-desc">Root causes centered on configuration weaknesses, IAM gaps, and access-control issues. All findings were remediated by the affected teams within 2–3 weeks of disclosure.</p>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="case-head">
+        <span class="case-id">CERT-In · government portals</span>
+        <span class="stamp">Validated</span>
+      </div>
+      <div class="case-body">
+        <h3 class="case-title">6+ validated vulnerability reports</h3>
+        <p class="case-meta">IDOR, access-control, and misconfiguration findings</p>
+        <p class="case-desc">Reported through responsible disclosure channels, using recon, enumeration, and manual testing with Burp Suite.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="press">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Press</h2></div>
+    <ul class="press-list">
+      <li>
+        <span class="press-outlet">Dark Reading</span>
+        <span class="press-title">Vulnerabilities Expose Private Data in Indian Government Systems</span>
+        <a class="press-link" href="https://www.darkreading.com/vulnerabilities-threats/vulnerabilities-private-data-indian-government-systems" target="_blank" rel="noopener">June 2026 →</a>
+      </li>
+      <li>
+        <span class="press-outlet">CERT-In</span>
+        <span class="press-title">Hall of Fame recognition for coordinated vulnerability disclosure</span>
+        <a class="press-link" href="#">2026 →</a>
+      </li>
+      <li>
+        <span class="press-outlet">Medium</span>
+        <span class="press-title">Writing on research, disclosure process, and the security researcher path</span>
+        <a class="press-link" href="https://medium.com/@sushant.bhardwaj.9th.c" target="_blank" rel="noopener">Read →</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Contact</h2></div>
+    <div class="contact-grid">
+      <div class="contact-item"><span class="l">Email</span><a href="mailto:sushant.bhardwaj.9th.c@gmail.com">sushant.bhardwaj.9th.c@gmail.com</a></div>
+      <div class="contact-item"><span class="l">GitHub</span><a href="https://github.com/SushantBhardwaj16" target="_blank" rel="noopener">github.com/SushantBhardwaj16</a></div>
+      <div class="contact-item"><span class="l">LinkedIn</span><a href="https://www.linkedin.com/in/sushant-bhardwaj-3589b3310/" target="_blank" rel="noopener">in/sushant-bhardwaj</a></div>
+      <div class="contact-item"><span class="l">Medium</span><a href="https://medium.com/@sushant.bhardwaj.9th.c" target="_blank" rel="noopener">@sushant.bhardwaj.9th.c</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Sushant Bhardwaj — Independent Security Researcher</p>
+</footer>
+
+</body>
+</html>
